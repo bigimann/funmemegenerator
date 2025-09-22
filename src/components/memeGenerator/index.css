@@ -40,6 +40,13 @@
   justify-content: space-between;
 }
 
+.meme-generator .form-input {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  justify-content: space-between;
+}
+
 .meme-generator .form > button {
   width: 100%;
   padding: 12px;
@@ -56,12 +63,12 @@
   border-radius: 5px;
   border: 1px solid gray;
   padding: 10px;
+  width: 100%;
 }
 
 .meme-generator .form label {
   display: flex;
   flex-direction: column;
-  width: 46.9%;
   gap: 5px;
   font-weight: 400;
 }
@@ -102,4 +109,24 @@
 
 .meme-generator .top {
   top: 0;
+}
+
+.desktop-warning {
+  display: none;
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+  background-color: white;
+}
+
+/* When screen ≥ 632px */
+@media (min-width: 632px) {
+  .meme-generator {
+    display: none;
+  }
+  .desktop-warning {
+    display: block;
+  }
 }

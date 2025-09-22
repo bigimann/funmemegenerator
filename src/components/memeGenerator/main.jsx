@@ -15,6 +15,8 @@ export default function Main() {
     }));
   }
 
+  console.log("dfgefgwdhgf");
+
   const [allMemes, setAllMemes] = React.useState([]);
 
   function memeDisplay() {
@@ -32,27 +34,29 @@ export default function Main() {
   return (
     <main className="main">
       <div className="form">
-        <label htmlFor="topText">
-          Top Text
-          <input
-            type="text"
-            name="topText"
-            placeholder="One does not simply"
-            onChange={handleChange}
-            value={meme.topText}
-          />
-        </label>
+        <div className="form-input">
+          <label htmlFor="topText">
+            Top Text
+            <input
+              type="text"
+              name="topText"
+              placeholder="One does not simply"
+              onChange={handleChange}
+              value={meme.topText}
+            />
+          </label>
 
-        <label htmlFor="bottomText">
-          Bottom Text
-          <input
-            type="text"
-            name="bottomText"
-            placeholder="Walk into Mordor"
-            onChange={handleChange}
-            value={meme.bottomText}
-          />
-        </label>
+          <label htmlFor="bottomText">
+            Bottom Text
+            <input
+              type="text"
+              name="bottomText"
+              placeholder="Walk into Mordor"
+              onChange={handleChange}
+              value={meme.bottomText}
+            />
+          </label>
+        </div>
 
         <button onClick={memeDisplay}>Get a new meme image 🖼</button>
       </div>
